@@ -4,6 +4,8 @@ apply plugin: 'maven'
 dependencies {
     implementation gradleApi()  //gradle sdk
     implementation localGroovy() //groovy sdk
+    //aspectj的依赖
+    implementation 'org.aspectj:aspectjtools:1.8.9'
 }
 
 sourceCompatibility = "1.7"
