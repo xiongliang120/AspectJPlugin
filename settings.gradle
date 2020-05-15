@@ -1,0 +1,3 @@
+rootProject.name='AspectJPluginDemo'
+include ':app'
+include ':aspectjplugin'

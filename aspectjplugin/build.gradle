@@ -1,0 +1,32 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+dependencies {
+    implementation gradleApi()  //gradle sdk
+    implementation localGroovy() //groovy sdk
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+
+repositories{
+    jcenter()
+}
+
+//生成插件的包名
+group = 'com.xl.aspectjplugin'
+//插件的版本号
+version = '1.0.0'
+
+//插件每次修改都需要重新打包
+uploadArchives{
+    repositories{
+        mavenDeployer{
+            //本地仓库的地址为项目根目录的/repos
+            repository(url:uri('../repo'))
+        }
+    }
+}
+
+
+
